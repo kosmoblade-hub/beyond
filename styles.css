@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{
+  --ink:#29362e;
+  --green:#365344;
+  --muted:#657066;
+  --cream:#f9f6ee;
+  --paper:#fffefa;
+  --sage:#e8ecdf;
+  --border:#dce1d5;
+  --accent:#b97a58;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;line-height:1.65}
+a{color:var(--green)}
+.shell{max-width:1160px;margin:auto;padding:0 30px}
+.header{display:flex;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:22px;gap:20px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.brand-kicker{font-family:'Playfair Display',Georgia,serif;font-size:31px;font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.brand-tag{font-size:12px;color:#6a7c67;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font-weight:700;font-size:11px;color:#6a7c67}
+.header-link{font-size:13px;font-weight:700;text-decoration:none;border-bottom:1px solid var(--green);white-space:nowrap}
+.hero{padding:28px 0 58px}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.hero h1{font:600 clamp(46px,5.4vw,79px)/1.12 'Playfair Display',Georgia,serif;letter-spacing:-.045em;margin:20px 0}
+.hero h1 em{font-style:italic;color:#9b664b}
+.lead{font-size:17px;color:#59675c;max-width:520px}
+.hero-visual-wrap{display:flex;justify-content:center}
+.hero-logo-card{
+  width:min(100%, 470px);
+  background:linear-gradient(180deg,#ffffff 0%,#fbfaf6 100%);
+  border:1px solid rgba(54,83,68,.12);
+  border-radius:34px;
+  box-shadow:0 18px 45px rgba(41,54,46,.11), 18px 18px 0 #e2e6d9;
+  padding:34px 24px 28px;
+  position:relative;
+}
+.hero-logo-card::before{
+  content:"";
+  position:absolute;
+  inset:16px;
+  border-radius:24px;
+  border:1px solid rgba(54,83,68,.07);
+  pointer-events:none;
+}
+.hero-logo{
+  display:block;
+  width:100%;
+  max-width:360px;
+  margin:0 auto;
+  height:auto;
+  filter:drop-shadow(0 10px 16px rgba(54,83,68,.10));
+}
+.small-note{font-size:12px;color:var(--muted)}
+.signup{margin-top:29px;background:var(--paper);border:1px solid var(--border);border-radius:15px;padding:23px;box-shadow:0 12px 35px #263e2f0b;max-width:520px}
+.signup strong{font-size:16px}
+.signup p{font-size:13px;color:var(--muted);margin:6px 0 14px}
+.signup-embed{min-height:120px;overflow-wrap:anywhere}
+.signup-embed iframe,.signup-embed form{max-width:100%}
+.section{padding:68px 0}
+.soft{background:var(--sage)}
+.section-heading{font:600 clamp(32px,4vw,47px)/1.2 'Playfair Display',Georgia,serif;margin:12px 0 28px;letter-spacing:-.03em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:27px}
+.card .number{font:600 38px 'Playfair Display',Georgia,serif;color:#ba8d6f}
+.card h3{font:600 22px 'Playfair Display',Georgia,serif;margin:10px 0}
+.card p{color:#5c675c;font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about p{color:#5c675c}
+.quote{background:#e8ecdf;border-left:4px solid #8b9d83;padding:25px 28px;border-radius:0 12px 12px 0;font:italic 21px/1.5 'Playfair Display',Georgia,serif}
+.social{background:var(--green);color:#fff;border-radius:18px;padding:35px 40px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.social h2{font:600 31px 'Playfair Display',Georgia,serif;margin:5px 0}
+.social p{margin:0;color:#e4e9e0}
+.button{background:#fff;color:var(--green);border:0;border-radius:8px;padding:14px 22px;font:700 14px 'DM Sans',sans-serif;text-decoration:none;display:inline-block;cursor:pointer;white-space:nowrap}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:28px;padding-bottom:35px;font-size:12px;color:var(--muted)}
+.footer a{margin-left:18px}
+.legal{max-width:780px;margin:55px auto 90px;padding:0 25px}
+.legal h1{font:600 45px 'Playfair Display',Georgia,serif}
+.legal h2{margin-top:34px;font-size:20px}
+@media(max-width:900px){
+  .hero-inner,.about{grid-template-columns:1fr;gap:32px}
+  .hero-visual-wrap{order:-1}
+}
+@media(max-width:760px){
+  .shell{padding:0 20px}
+  .hero{padding-top:8px}
+  .hero h1{font-size:49px}
+  .cards{grid-template-columns:1fr}
+  .section{padding:48px 0}
+  .social{display:block;padding:30px}
+  .button{margin-top:20px;white-space:normal}
+  .header{display:block}
+  .header-link{display:inline-block;margin-top:10px;font-size:11px}
+  .brand-kicker{font-size:27px}
+  .brand-tag{font-size:11px;letter-spacing:.06em}
+  .hero-logo-card{padding:26px 18px 22px;box-shadow:0 16px 34px rgba(41,54,46,.11),10px 10px 0 #e2e6d9}
+  .footer{display:block}
+  .footer a{margin:0 18px 0 0}
+}
